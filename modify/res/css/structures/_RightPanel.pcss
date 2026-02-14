@@ -1,0 +1,41 @@
+/*
+Copyright 2024 New Vector Ltd.
+Copyright 2020 The Matrix.org Foundation C.I.C.
+Copyright 2015, 2016 OpenMarket Ltd
+Modified by Sportis JSC (2026) — palette background and borders
+
+SPDX-License-Identifier: AGPL-3.0-only OR GPL-3.0-only OR LicenseRef-Element-Commercial
+Please see LICENSE files in the repository root for full details.
+*/
+
+.mx_RightPanel {
+    overflow-x: hidden;
+    flex: 0 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* Sportis: subtle border using palette 800 */
+    border-left: 1px solid var(--sportis-border-subtle, #202F46);
+    box-sizing: border-box;
+    height: 100%;
+    contain: strict;
+    /* Sportis: right panel uses system (900) */
+    background-color: var(--sportis-bg-system, #101823);
+    /* Sportis: force all Compound separators to use palette colors */
+    --cpd-separator-color: var(--sportis-border-separator, #2F476A);
+
+    .mx_RoomView_MessageList {
+        padding: 14px 18px; /* top and bottom is 4px smaller to balance with the padding set above */
+    }
+}
+
+.mx_RightPanel .mx_MemberList,
+.mx_RightPanel .mx_MemberInfo {
+    order: 2;
+    flex: 1 1 0;
+}
+
+.mx_RightPanel .mx_RoomView_messagePanelSpinner {
+    order: 2;
+    margin: auto;
+}
