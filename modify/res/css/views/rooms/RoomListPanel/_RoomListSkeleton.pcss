@@ -1,0 +1,26 @@
+/*
+ * Copyright 2025 New Vector Ltd.
+ * Modified by Sportis JSC (2026) — palette color overrides
+ *
+ * SPDX-License-Identifier: AGPL-3.0-only OR GPL-3.0-only OR LicenseRef-Element-Commercial
+ * Please see LICENSE files in the repository root for full details.
+ */
+
+.mx_RoomListSkeleton {
+    position: relative;
+    margin-left: 4px;
+    height: 100%;
+
+    &::before {
+        /* Sportis: use panels bg instead of cpd-color-bg-subtle-secondary */
+        background-color: var(--sportis-bg-panels, #202F46);
+        width: 100%;
+        height: 100%;
+
+        content: "";
+        position: absolute;
+        mask-repeat: repeat-y;
+        mask-size: auto 96px;
+        mask-image: url("$(res)/img/element-icons/roomlist/room-list-item-skeleton.svg");
+    }
+}
