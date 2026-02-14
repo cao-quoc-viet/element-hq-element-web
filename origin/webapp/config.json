@@ -1,0 +1,49 @@
+{
+    "default_server_config": {
+        "m.homeserver": {
+            "base_url": "http://localhost:8008",
+            "server_name": "matrix.sportis.local"
+        }
+    },
+    "disable_custom_urls": true,
+    "disable_guests": true,
+    "disable_login_language_selector": true,
+    "disable_3pid_login": true,
+    "brand": "Sportis Community",
+    "default_country_code": "VN",
+    "show_labs_settings": false,
+    "default_federate": false,
+    "default_theme": "light",
+    "room_directory": {
+        "servers": ["matrix.sportis.local"]
+    },
+    "setting_defaults": {
+        "breadcrumbs": true,
+        "UIFeature.advancedEncryption": false,
+        "UIFeature.BulkUnverifiedSessionsReminder": false,
+        "UIFeature.registration": false,
+        "UIFeature.identityServer": false
+    },
+    "sso_redirect_options": {
+        "immediate": true,
+        "on_welcome_page": true,
+        "on_login_page": true
+    },
+    "auto_join_rooms": [
+        "#community:matrix.sportis.local"
+    ],
+    "force_verification": false,
+    "branding": {
+        "welcome_background_url": null,
+        "auth_header_logo_url": null,
+        "auth_footer_links": []
+    },
+    "desktop_builds": {
+        "available": false
+    },
+    "mobile_builds": {},
+    "features": {
+        "feature_exploring_public_spaces": true
+    },
+    "map_style_url": null
+}
